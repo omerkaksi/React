@@ -20,7 +20,6 @@ const Content = () => {
         item: "Item 3"
     }
 ]);
-
 const handleCheck = (id) =>{
   const listItems= items.map((item) =>item.id===id? {...item, checked: !item.checked}: item);
   setItems(listItems);
@@ -32,7 +31,6 @@ const handleDelete = (id) => {
   setItems(listItems);
   localStorage.setItem('shoppinglist',JSON.stringify(listItems));
 }
-
       
         return (
     <main>
