@@ -3,15 +3,13 @@ import SearchItem from './SearchItem';
 import AddItem from './AddItem';
 import Content from './Content';
 import Footer from './Footer';
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')));
   const [newItem, setNewItem] = useState('')
   const [search, setSearch] = useState('')
-console.log('before useEffect')
-  useEffect(() => {console.log('inside use effect')},[items])
-  console.log('after useEffect')
+
   const setAndSaveItems = (newItems) => {
     setItems(newItems);
     localStorage.setItem('shoppinglist', JSON.stringify(newItems));
