@@ -1,20 +1,39 @@
+import Header from './Header';
+import Nav from './Nav';
+import Footer from './Footer';
+import Home from './Home';
+import NewPost from './NewPost';
+import PostPage from './PostPage';
+import About from './About';
+import Missing from './Missing';
+import {Route,Switch,useHistory} from 'react-router-dom';
+import {useState, useEffect} from 'react';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header/>
+     <Nav/>
+     <Switch>
+        <Route exact path="/">
+          <Home posts={searchResults} />
+        </Route>
+        <Route exact path="/post">
+          <NewPost
+            handleSubmit={handleSubmit}
+            postTitle={postTitle}
+            setPostTitle={setPostTitle}
+            postBody={postBody}
+            setPostBody={setPostBody}
+          />
+        </Route>
+        <Route path="/post/:id">
+          <PostPage posts={posts} handleDelete={handleDelete} />
+        </Route>
+        <Route path="/about" component={About} />
+        <Route path="*" component={Missing} />
+      </Switch>
+     <Footer/>
+     
     </div>
   );
 }
