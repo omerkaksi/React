@@ -38,17 +38,17 @@ body {
 }
 
 form {
-  width: 400px;
+  width: 410px;
 }
 
 label {
   position: absolute;
-  left: -99999px;
+  left: -9999px;
 }
 
 input[type="text"] {
   margin-top: 0.5rem;
-  padding: 0.25rem;
+  padding: 0.20rem;
   width: 100%;
   font-size: 1rem;
   box-shadow: 2px 2px 5px #000;
