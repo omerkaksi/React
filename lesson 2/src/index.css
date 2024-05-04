@@ -9,14 +9,14 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 90vh;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,12 +38,12 @@ body {
 }
 
 form {
-  width: 410px;
+  width: 420px;
 }
 
 label {
   position: absolute;
-  left: -9999px;
+  left: -99990px;
 }
 
 input[type="text"] {
