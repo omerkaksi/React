@@ -38,7 +38,7 @@ body {
 }
 
 form {
-  width: 420px;
+  width: 400px;
 }
 
 label {
@@ -48,7 +48,7 @@ label {
 
 input[type="text"] {
   margin-top: 0.5rem;
-  padding: 0.20rem;
+  padding: 0.25rem;
   width: 100%;
   font-size: 1rem;
   box-shadow: 2px 2px 5px #000;
